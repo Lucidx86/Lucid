@@ -355,7 +355,7 @@ class AnalisadorSeguranca:
         
         for bl in blacklists:
             try:
-                query = f"{'.'.join(reversed(ip.split('.'))}.{bl}"
+                query = f"{'.'.join(reversed(ip.split('.')))}.{bl}"
                 socket.gethostbyname(query)
                 Utilitarios.mostrar_status(f"{bl}", "LISTADO", status="erro")
             except:
